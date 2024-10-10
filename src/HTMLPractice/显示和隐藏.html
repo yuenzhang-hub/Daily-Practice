@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示和隐藏</title>
+    <style>
+
+        /*第一部分*/
+        /*display: none; 隐藏 不保留位置
+        display: block; 显示 */
+        .w{
+            width: 200px;
+            height: 200px;
+        }
+
+        .peppa{
+            background-color: pink;
+            display: none;
+        }
+
+        .george{
+            background-color: #00a4ff;
+        }
+
+        /*
+        第二部分
+        visibility:visible; 显示
+        visibility:hidden; 隐藏 保留位置
+         */
+
+        /*
+        第三部分
+        overflow:visible; 显示
+        overflow:hidden;  隐藏
+        overflow: scroll;  不溢出也显示滚动条
+        overflow: auto; 在需要的时候添加滚动条
+        */
+
+    </style>
+</head>
+<body>
+<div class="w peppa">佩奇</div>
+<div class="w george">乔治</div>
+</body>
+</html>

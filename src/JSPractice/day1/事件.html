@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        //盒子居中
+        margin: 100px auto ;
+        position: relative;
+        top: 50%;
+        left: 50%;
+    }
+</style>
+<body>
+<div></div>
+
+<script>
+    //鼠标经过
+    const div=document.querySelector('div')
+    div.addEventListener('mouseenter',function (){
+        console.log('我来了')
+    })
+    //鼠标离开
+    div.addEventListener('mouseleave',function (){
+        console.log('我走了')
+    })
+</script>
+
+<!--<script>-->
+<!--    const  btn=document.querySelector('button')-->
+<!--    btn.addEventListener('click',function (){-->
+<!--        alert('点击了')-->
+<!--    })-->
+<!--</script>-->
+
+
+
+
+</body>
+</html>

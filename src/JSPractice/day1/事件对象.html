@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<script>
+    const input=document.querySelector('input')
+    input.addEventListener('keyup',function(e){
+        //console.log(e.key)//用户从键盘输入任意键则会触发该事件
+        //用户按回车才会触发该事件
+        if (e.key==='Enter'){
+            console.log('用户按下了回车键')
+        }
+    })
+</script>
+</body>
+</html>

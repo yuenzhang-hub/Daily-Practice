@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单和按钮</title>
+</head>
+<body>
+
+城市：
+<!-- select嵌套option -->
+<!-- selected 表示默认选择 -->
+<select>
+    <option>
+        云南
+    </option>
+
+    <option>
+        北京
+    </option>
+
+    <option selected>
+        武汉
+    </option>
+
+</select>
+
+
+<br><br><br>
+
+
+<!-- 文本域标签（textarea） -->
+<!--  textarea 标签自动换行并且可以放大/小  -->
+<textarea>请你输入文字</textarea>
+
+
+<br><br><br>
+
+
+<!-- label属性 增大点击范围 -->
+<!--  写法一  要求for属性值和id属性值相同  属性值和name中的gender一样 自己设置  -->
+性别：
+<!--    <input type="radio" name="gender" id="man">       男         <label for="man">  </label>   此标签错误，因为此时男不能写在input中 而是写在label中 才能体现点击功能  -->
+
+<input type="radio" name="gender" id="man"> <label for="man">男</label>
+<input type="radio" name="gender">女
+
+<!-- 方法二 label标签直接包裹input -->
+<label> <input type="radio" name="gender">女 </label>
+
+
+<br><br><br>
+<!-- 需要用form标签包涵，按钮才能使用 -->
+<form>
+
+    <!--  按钮标签 button   -->
+    <!--  <button type="">  按钮   </button>       -->
+    <!--  submit 提交数据给后台 （默认功能）
+          reset  重设置
+          button 默认无功能-->
+
+    文本框：<input type="text" placeholder="请输入账号"><br>
+    密码框：<input type="password" placeholder="请输入密码"><br>
+    <!-- 如果省略type，则也是提交功能 -->
+    <br>
+    <button type="submit"> 提交</button>
+    <button type="reset">重置</button>
+    <button type="button">普通按钮</button>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+
+<!-- 输入什么显示什么 -->
+<!-- 文本框：<input type="text"><br>
+     密码框：<input type="password"><br>
+     单选框：<input type="radio"><br>
+     多选框:<input type="checkbox"><br>
+     上传文件：<input type="file"><br>      -->
+
+<!-- input的 占位 提示信息 属性（placeholder） -->
+<!-- 文本框：<input type="text" placeholder="请输入账号"><br>
+     密码框：<input type="password" placeholder="请输入密码"><br>  -->
+
+
+<!-- 单选功能 -->
+<!-- 必须加name属性并且取名相同，才能体现单选功能  -->
+性别：
+<input type="radio" name="gender"> 男
+<input type="radio" name="gender"> 女
+
+<br><br>
+
+性别：
+<!-- 打开默认选择其中一个 利用(checked)属性 -->
+<input type="radio" name="gender" checked> 男
+<input type="radio" name="gender"> 女
+
+<br><br>
+
+<!-- 上传文件属性(file)一次一个文件，多个文件加multiple属性 -->
+上传文件：
+一个<input type="file">
+多个  <input type="file" multiple>
+
+<br><br>
+
+多选框：
+<input type="checkbox"> 吃饭
+<input type="checkbox"> 睡觉
+<input type="checkbox" checked> 学习
+<input type="checkbox" checked> 电影
+</body>
+</html>

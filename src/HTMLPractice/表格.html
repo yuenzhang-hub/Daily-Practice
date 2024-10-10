@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+</head>
+<body>
+
+
+<!--  表格table(表格)嵌套tr（行） ,tr嵌套td（内容单元格）/th（表头单元格） -->
+<!--  无边框线需要加bordr标签 -->
+<!-- thead tbody tfoot 都需要包含tr 但是中table之下 -->
+<table border="1px">
+    <thead>
+    <!-- 头部 行 的表格定义th -->
+    <tr>
+        <th>姓名</th>
+        <th>语文</th>
+        <th>数学</th>
+        <th>总分</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- 此后需要重新创建tr -->
+    <tr>
+        <td>张三</td>
+        <td rowspan="2">99</td>
+        <td colspan="2">100</td>
+        <td>199</td>
+    </tr>
+
+    <tr>
+        <td>李四</td>
+        <td>98</td>
+        <td>100</td>
+        <td>198</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td>总结</td>
+        <td>第一名</td>
+        <td>第一名</td>
+        <td>第一名</td>
+    </tr>
+    </tfoot>
+</table>
+
+
+<form action="#" method="post" name="name1">
+    用户：<input type="text" value="请你输入密码"><br>
+    密码:<input type="password">
+
+    性别：男<input type="radio" name="6" checked="checked">
+    女<input type="radio" name="6"><br>
+
+    爱好：吃饭<input type="checkbox">
+    睡觉 <input type="checkbox">
+    看美女 <input type="checkbox">
+    旅行 <input type="checkbox">
+    
+    提交：<input type="submit" value="免费注册">
+    <label for="sm">上传头像：</label><input type="file" id="sm">
+
+</form>
+
+<select>
+    <option selected="selected">2</option>
+    <option>3</option>
+    <option>2</option>
+</select>
+
+<form>
+    今日反馈：<textarea>css</textarea>
+</form>
+
+
+</body>
+</html>

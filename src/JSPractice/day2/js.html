@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+        /*div{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background-color: pink;*/
+        /*}*/
+
+
+        /*.box{*/
+        /*    width: 300px;*/
+        /*    height: 300px;*/
+        /*    background-color: skyblue;*/
+        /*    margin: 100px auto;*/
+        /*    padding: 10px;*/
+        /*    border: 1px solid #000;*/
+        /*}*/
+
+
+        /*
+        span{
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            padding: 5px 10px;
+            border: 1px solid pink;
+            margin: 2px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px rgb(255, 192, 203,.4);
+            background-color: rgb(255, 192, 203,.1);
+
+
+
+
+
+        }
+
+         */
+
+
+        .box{
+            width: 300px;
+            height: 300px;
+            color: #333;
+        }
+
+
+
+        .active{
+            color: red;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box">文章内容</div>
+
+
+</body>
+</html>
+<!--<div class="box"></div>-->
+<!--<ul>-->
+<!--    <li>测试1</li>-->
+<!--    <li>测试2</li>-->
+<!--    <li>测试3</li>-->
+<!--</ul>-->
+<script>
+
+    //1.获取元素
+    const box=document.querySelector('.box')
+    //2.修改样式
+    box.classList.add('active')//添加了active类名
+
+    box.classList.remove('active')//删除了active类名
+
+    box.classList.toggle('active')//切换
+
+
+    // const div=document.querySelector('div')
+    // div.className='box'//相当于添加了class属性
+
+
+
+
+    // const box=document.querySelector('.box')
+    // box.style.width='200px'
+
+
+
+    // //1.获取元素
+    // const box=document.querySelector('.box')
+    // //2.修改文字内容
+    // box.innerText='我是修改后的文字内容'
+    // box.innerText='<strong>我是修改后的文字内容</strong>'
+
+    // //1.获取元素
+    // const box=document.querySelector('.box')
+    // //2.修改文字内容
+    // box.innerHTML='我是修改后的文字内容'
+    // box.innerHTML='<strong>我是修改后的文字内容</strong>'
+
+
+
+    /*
+//根据id获取第一个元素
+document.getElementById('nav')
+//根据标签获取一类的元素
+document.getElementsByTagName('div')//获取页面所有的div标签
+//根据类名获取一类的元素
+document.getElementsByClassName('box') //获取页面所有的box类
+     */
+
+
+
+
+
+
+
+
+
+
+    // const li=document.querySelectorAll('ul li:first-child');
+    // console.log(li)
+
+
+
+
+
+    //获取匹配的第一个元素
+    // const box=document.querySelector('div');
+    // const box=document.querySelector('.box')
+    // console.log(box)
+
+
+
+
+    /*
+    console.log(1+1)//数字类型
+    console.log('pink'+1)//字符串类型
+
+    console.log(2+'2')//字符串类型
+    console.log(2-'2')//数字类型
+
+    console.log(+12)//数字类型
+    console.log(+'12')//数字类型,此时（正号）+号的作用是将字符串转换成数字类型
+
+    console.log(parseInt('123px'))//将字符串转换成数字类型,结果为123
+    console.log(parseFloat('123.589px'))//将字符串转换成数字类型,结果为123.589
+    console.log(parseFloat('abc12.589'))//结果为NaN
+
+     */
+
+    //打印9乘表
+
+    /*for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write(`<span>${j}*${i}=${i*j}</span>`);
+        }
+        document.write("<br>");
+    }
+     */
+
+    /*
+
+    //求数组【12，55，66，33，22，，99】的最大值和最小值
+    let arr = [12,55,66,33,22,99];
+    let max = arr[0];//初始化最大值
+    for (let i = 1; i < arr.length; i++) {//遍历
+        if (arr[i]>max){  //比较
+            max = arr[i];//更新
+        }
+    }
+    console.log(max);//输出
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i]<min){
+            min = arr[i];
+        }
+    }
+    console.log(min);
+
+
+
+     */
+
+
+
+    /*
+    //数组筛选，筛选出大于10的数
+    let arr = [2,5,6,33,22,9,1,0];
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]!==0){
+            newArr.push(arr[i]);
+        }
+    }
+    console.log(newArr);
+
+     */
+
+
+    /*
+
+    //将99乘表，用函数封装
+    function print() {
+        for (let i = 1; i <= 9; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(`<span>${j}*${i}=${i * j}</span>`);
+            }
+            document.write("<br>");
+        }
+    }
+
+    print();
+    print();
+
+
+
+     */
+
+    /*
+
+    //函数封装求数组学生分数总和
+    function getArrSum(arr=[]) { //赋值空数组解决NaN问题
+        let sum=0
+        for (let i = 0; i < arr.length; i++) {
+            sum+=arr[i];
+        }
+        console.log(sum);
+    }
+    getArrSum([1,2,3,4,5])
+    getArrSum([11,22,33])
+    getArrSum()
+
+
+     */
+
+
+
+    /*
+    //输入两个数n，m,求n~m的累加和
+    function getSum(n=0,m=0) {
+        let sum=0;
+        for (let i = n; i <= m; i++) {
+            sum+=i;
+        }
+        console.log(sum);
+    }
+    let num1=prompt('输入起始数')
+    let num2=prompt('输入结束数')
+
+    getSum(num1,num2)//实参可以是变量
+
+     */
+
+
+    /*
+    //函数返回值，调用写法
+    function fu(){
+        return 20 //相当于fu()=20
+    }
+    let result=fu() //而此时函数的返回值是20，以后可以用result接收即可。
+    console.log(result)
+
+
+     */
+
+    /*
+    function getToalPrice(x,y){
+        return x+y
+    }
+    getToalPrice(1,2)
+    let sum=getToalPrice(1,2)
+    console.log(sum)
+
+     */
+
+/*
+
+
+    //实参多余形参，则剩余的实参不参加计算
+
+    function getToalPrice(x,y){
+        return x+y
+    }
+    let sum=getToalPrice(1,2,3,4)
+
+
+    //实参少余形参，则剩余的实参不参加计算,并且多余的形参为undefined
+    function getToalPrice(x,y){
+        return x+y
+    }
+    let sum=getToalPrice(1)
+
+ */
+
+    /*
+    //不同作用域，变量名冲突情况下，应先执行谁？
+    let a=10;
+    function fn(){
+        let a=20;
+        console.log(a)
+    }
+    fn()
+
+
+     */
+
+
+
+   /*
+   //立即执行函数
+    (function () {
+        console.log('立即执行函数')
+    })();
+
+    */
+
+
+
+    // let zhang={
+    //     uname:'zhangjingui',
+    //     age:21,
+    //     gender:'男'
+    // }
+    // console.log(zhang)
+    // console.log(zhang.uname)
+    // console.log(zhang['uname'])
+    // console.log(typeof zhang)
+    //
+    // zhang.uname='wenqing'
+
+
+    // let obj={
+    //     uname:'zhangjingui',
+    //     age:21,
+    //     gender:'男',
+    //     sayHi:function () { //方法
+    //         console.log('hi zhnagjingui')
+    //     }
+    // }
+    // obj.sayHi()//调用方法
+
+
+    // //创建对象
+    // let obj={
+    //     uname:'zhangjingui',
+    //     age:21,
+    //     gender:'男'
+    // }
+    // // 遍历对象
+    // for (let k in obj){
+    //     console.log(obj.uname)//输出值，例如zhangjingui
+    //     console.log(obj.k)//输出undefined
+    //     console.log(obj['uname'])//输出值，例如zhangjingui
+    //     console.log(k)//输出键，例如uname,age,gender
+    //     console.log(obj[k])//输出值,例如zhangjingui,21,男
+    // }
+
+//Math对象
+    /*
+    random():生成0~1之间的随机小数
+    ceil():向上取整
+    floor():向下取整
+    round():四舍五入
+    pow(x,y):x的y次方
+    sqrt(x):开方，x的平方根
+    abs(x):绝对值
+    min(x,y):取最小值
+    max(x,y):取最大值
+     */
+
+
+    // let num3=Math.floor(Math.random()*(5+1))//0~5之间的随机数
+    // let num=Math.floor(Math.random()*100)//利用randrom()生成1~100之间的随机数
+    // let num2=Math.floor(Math.random()*(M-N+1))+N//N~M之间的随机数
+
+
+
+
+
+</script>
+</body>
+</html>

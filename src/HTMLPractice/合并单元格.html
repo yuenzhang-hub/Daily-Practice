@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>合并单元格</title>
+</head>
+<body>
+
+<!-- 竖合并 保留 最上 加rowspan     比如 <th rowspan=" 合并几个，数字就写几">姓名</th>  -->
+<!--   -->
+<table border="1px">
+    <thead>
+    <!-- 头部 行 的表格定义th -->
+    <tr>
+        <th>姓名</th>
+        <th>语文</th>
+        <th>数学</th>
+        <th>总分</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- 此后需要重新创建tr -->
+    <tr>
+        <td>张三</td>
+        <td>99</td>
+        <td rowspan="2">100</td>
+        <td>199</td>
+    </tr>
+
+    <tr>
+        <td>李四</td>
+        <td>98</td>
+        <!-- 合并也要删除或者注释 -->
+        <td>198</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td>总结</td>
+        <td colspan="3">第一名</td>
+        <!--    <td>第一名</td>-->
+        <!--    <td>第一名</td>-->
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<textarea name="" id="" cols="30" rows="10">
+    用户注册协议
+    厦门海峡大剧院灯光璀璨，迎来了第34届"飞天奖"与第28届"星光奖"的共同颁奖盛典，48部和79部不同的优秀作品竞争激烈，成果丰富。电视剧和剧作人员的卓越贡献再次得到了行业的高度认可，尤其是雷佳音和赵丽颖两位实力派演员在此次颁奖典礼上获得了极高的关注。
+</textarea>
+<br>
+<button class="btn" disabled>我已阅读协议（5）</button>
+<script>
+    const btn=document.querySelector('.btn')
+    let i=5
+    let n=setInterval(function (){
+        i--
+        btn.innerHTML=`我已阅读协议(${i})`
+        if(i===0){
+            btn.disabled=false//启用按钮
+            btn.innerHTML=`我已阅读协议`
+          clearInterval(n)
+        }
+    },1000)
+</script>
+</body>
+</html>

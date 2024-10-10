@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝轮播图</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .tb-promo img {
+            /*保证以后加进来的盒子都是这个大小*/
+            width: 520px;
+            height: 280px;
+        }
+
+        /*并集选择器可以提取相同的样式*/
+        .prev, .next {
+            /*加了绝定位的盒子可以直接设置高宽，而不用设置a标签的display转换*/
+            position: absolute;
+            /*绝对定位垂直居中算法*/
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            /*居中和文字*/
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /*左箭头*/
+        .prev {
+            left: 0;
+            /*圆角*/
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        /*右箭头*/
+        .next {
+            /*如果一个盒子既有left又有right属性，则默认会执行left属性*/
+            right: 0;
+            /*圆角*/
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        /*底部小园点的盒子*/
+        .promo-nav {
+            /*绝对定位*/
+            position: absolute;
+            bottom: 15px;
+            /*定位算法*/
+            left: 50%;
+            margin-left: -35px;
+            width: 40px;
+            height: 13px;
+            background: rgba(255, 255, 255, .3);
+            /*盒子变成圆形,高度的一半*/
+            border-radius: 7px;
+        }
+
+        /*小园点可以用ul来做*/
+        .promo-nav li {
+            /*效力大小*/
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            /*使用小li浮动并且小li圆形化*/
+            float: left;
+            border-radius: 50%;
+            /*拉开小li大小*/
+            margin: 3px;
+        }
+        /*当前位置小圆点变色*/
+        .promo-nav .selected{
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+<body>
+<div class="tb-promo">
+    <img src="淘宝images/tb.jpg"/>
+    <!--    左侧箭头-->
+    <a href="#" class="prev">&lt;</a>
+    <!--    右侧箭头-->
+    <a href="#" class="next">&gt;</a>
+    <!--    小园点可以用ul来做-->
+    <ul class="promo-nav">
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>

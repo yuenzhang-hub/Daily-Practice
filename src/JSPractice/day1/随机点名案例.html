@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .box {
+            width: 600px;
+            margin: 50px auto;
+            display: flex;
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        .qs {
+
+            width: 450px;
+            height: 40px;
+            color: red;
+
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        .btns button {
+            width: 120px;
+            height: 35px;
+            margin: 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>随机点名</h2>
+    <div class="box">
+        <span>名字是：</span>
+        <div class="qs">这里显示姓名</div>
+    </div>
+    <div class="btns">
+        <button class="start">开始</button>
+        <button class="end">结束</button>
+    </div>
+
+    <script>
+
+        let timerId=0//定时器的全局变量
+        let random=0//随机数的全局变量
+        // 数据数组
+        const arr = ['马超', '黄忠', '赵云', '关羽', '张飞']
+        const start = document.querySelector('.start')
+        const qs = document.querySelector('.qs')
+        const end=document.querySelector('.end')
+
+        // 开始
+        start.addEventListener('click', function (){
+            timerId=setInterval(function () {
+                random=parseInt(Math.random()*arr.length)//随机数
+                qs.innerHTML=arr[random]//显示随机数对应的名字
+           },100)
+        })
+
+        //如果只剩下一个值了，就禁用按钮
+        if (arr.length==1){
+            start.disabled=true//禁用按钮
+            end.disabled=true//禁用按钮
+        }
+
+
+        // 结束
+        end.addEventListener('click',function (){
+            clearInterval(timerId)//清除定时器
+            //结束了，删除当前选取的那个元素
+            arr.splice(random,1)
+            console.log(arr)
+        })
+
+
+
+
+
+//事件addEventListener，随机数Math.random()，定时器setInterval,数组的删除splice()
+    </script>
+</body>
+
+</html>

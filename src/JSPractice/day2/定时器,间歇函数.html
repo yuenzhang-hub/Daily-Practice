@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+// 定时器,间歇函数
+//1.开启定时器格式: setInterval(fn,time)
+<script>
+    
+    // setInterval(function () {
+    //     console.log("定时器执行了")
+    // }, 1000)
+    
+    
+    function fn() {
+        console.log("定时器执行了")
+    }
+    setInterval(fn, 1000)//函数名不用加小括号
+    setInterval('fn()', 1000)//字符串调用函数
+
+    clearInterval(fn)
+</script>
+</body>
+</html>
